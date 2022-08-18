@@ -35,7 +35,7 @@ local myData = loadstring(game:HttpGet("https://raw.githubusercontent.com/z4gs/s
     },
     DistanceFromNpc = 5,
     DistanceFromBoss = 8,
-    TeleportSpeed = 150,
+    TeleportSpeed = 300,
     ReputationFarm = false,
     ReputationCashout = false,
     AutoKickWhitelist = ""
@@ -358,23 +358,6 @@ local function getQuest(typ)
     end
 end
 
-/*local function collect(npc)
-    local timer = tick()
-    local model = waitforobj(npc, npc.Name.." Corpse", 2)
-    local clickpart = waitforobj(model, "ClickPart", 2)
-
-    player.Character.HumanoidRootPart.CFrame = clickpart.CFrame * CFrame.new(0,1.7,0)
-
-    waitforobj(clickpart, "")
-    repeat
-        if tick() - timer > 4 then
-            break
-        end
-        player.Character.Humanoid:MoveTo(clickpart.Position)
-        wait()
-        fireclickdetector(clickpart[""], 1)
-    until not model.Parent.Parent or not findobj(model, "ClickPart") or not array.autofarm or player.Character.Humanoid.Health <= 0
-end*/
 
 local function pressKey(topress)
     fire(player.Character.Remotes.KeyEvent, key, topress, "Down", player:GetMouse().Hit, nil, workspace.Camera.CFrame)
@@ -516,14 +499,6 @@ while true do
                         if npc.Name == "Gyakusatsu" then
                             player.Character.Humanoid.Health = 0
                         end
-
-                        /*if array.autofarm and player.Character.Humanoid.Health > 0 then
-                            labels("Kills", 1)
-                            if npc.Name ~= "Eto Yoshimura" and not findobj(npc.Parent, "Gyakusatsu") and npc.Name ~= "Gyakusatsu" then  
-                                labels("text", "Collecting corpse...")
-                                collect(npc)
-                            end
-                        end*/
                     end
                 else
                     labels("text", "Target not found, waiting...")
