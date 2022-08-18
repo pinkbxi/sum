@@ -35,7 +35,7 @@ local myData = loadstring(game:HttpGet("https://raw.githubusercontent.com/z4gs/s
     },
     DistanceFromNpc = 5,
     DistanceFromBoss = 8,
-    TeleportSpeed = 300,
+    TeleportSpeed = 400,
     ReputationFarm = false,
     ReputationCashout = false,
     AutoKickWhitelist = ""
