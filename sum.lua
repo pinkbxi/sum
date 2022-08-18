@@ -35,7 +35,7 @@ local myData = loadstring(game:HttpGet("https://raw.githubusercontent.com/z4gs/s
     },
     DistanceFromNpc = 5,
     DistanceFromBoss = 8,
-    TeleportSpeed = 400,
+    TeleportSpeed = 300,
     ReputationFarm = false,
     ReputationCashout = false,
     AutoKickWhitelist = ""
@@ -153,7 +153,7 @@ end
 
 tab2:AddSlider("TP Speed", function(x)
     myData:Set("TeleportSpeed", x)
-end, {min = 90, max = 250}):Set(45)
+end, {min = 90, max = 500}):Set(45)
 
 tab2:AddSlider("Distance from NPC", function(x)
     myData:Set("DistanceFromNpc", x * -1)
